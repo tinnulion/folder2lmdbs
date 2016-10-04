@@ -77,8 +77,8 @@ def separate_train_and_val(index, split_fraction):
         val_size = max(val_size, 1)
         shuffled_images = category_images.copy()
         random.shuffle(shuffled_images)
-        train_images = shuffled_images[:val_size]
-        val_images = shuffled_images[val_size:]
+        train_images = shuffled_images[val_size:]
+        val_images = shuffled_images[:val_size]
         train[category] = train_images
         val[category] = val_images
     return train, val
