@@ -176,7 +176,7 @@ def main():
     train_listfile = os.path.join(args.dst, 'train_listfile.txt')
     generate_listfile(train, train_listfile)
     val_listfile = os.path.join(args.dst, 'val_listfile.txt')
-    generate_listfile(train, val_listfile)
+    generate_listfile(val, val_listfile)
 
     print('Generate LMDBs by Caffe convert_imageset...')
     generate_lmdb(args.caffe, train_listfile, src_folder, args.dst, 'train', args.size, args.store_png)
