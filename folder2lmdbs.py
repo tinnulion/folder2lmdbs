@@ -16,9 +16,8 @@ def check_args(args):
         print('Termination.')
         sys.exit(1)
     if not os.path.exists(args.dst):
-        print('Cannot find destination folder:', args.dst)
-        print('Termination.')
-        sys.exit(1)
+        print('Creating new folder:', args.dst)
+        os.makedirs(args.dst)
     if len(os.listdir(args.dst)) > 0:
         print('Destination folder is not empty.')
         print('Termination for safety reasons.')
