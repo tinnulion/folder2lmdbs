@@ -1,4 +1,4 @@
-# folder2lmdbs
+# folder2lmdbs.py
 
 ### Script generates two LMDBs from image folder like this
 
@@ -26,6 +26,20 @@ Hypothetical example on CASIA dataset:
 python3 folder2lmdbs.py --src /data/casia --dst /data/casia-db --caffe /usr/local/caffe --resize 144 --min 20 --png
 ```
 
+# balancer.py
+
+### Script creates balanced and shrinked version of dataset.
+
+Usage:
+
+```
+python3 balancer.py --src <dataset> --top <number-of-categories-to-keep> --dst <balanced-dataset> [--size <category-sizes>]
+```
+
+Hypothetical example on CASIA dataset:
+
+```
+python3  balancer.py --src /data/casia --top 100 --dst /data/casia_balanced --size 10000
 
 
 
