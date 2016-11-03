@@ -39,7 +39,7 @@ python3 balancer.py --src <dataset> --top <number-of-categories-to-keep> --dst <
 Hypothetical example on CASIA dataset:
 
 ```
-python3  balancer.py --src /data/casia --top 100 --dst /data/casia_balanced --size 10000
+python3  balancer.py --src /data/casia --top 10000 --dst /data/casia_balanced --size 100
 
 
 
